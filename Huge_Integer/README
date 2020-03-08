@@ -1,0 +1,10 @@
+
+Huge Integer arithmetic: addition, subtraction, multiplication, division using operator overloading in C++.
+
+Build and run: 
+  # make all && make run
+
+Clean: 
+  # make clean
+
+Development notes: developed on Linux using Eclipse 
