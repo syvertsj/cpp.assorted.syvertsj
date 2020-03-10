@@ -1,0 +1,66 @@
+Poker Ranker (C++)
+
+Poker ranking application to read hands by parsing 
+libconfig config file or plain text file of hands in sequence.
+
+This is a hybrid eclipse project and terminal project.
+
+Wikipedia's page on poker ranking is helpful: 
+    https://en.wikipedia.org/wiki/List_of_poker_hands
+--------------------------------------------------------------------------------
+
+Build: make all
+
+Run: make run
+
+--------------------------------------------------------------------------------
+
+Input file is parsed, Cards are creadted and Hands are formed, categorized, and compared.
+
+Ranking is enumerated for the Hand.
+
+A Categorizer exists for each of 8 types, not including the base case of high card.
+Each extend the abstract Categorizer and implement doCategorize() for their own criterion.
+
+The PokerRanker checks for each category descending from highest to lowest.
+
+This makes extensive use of polymorphism and runtime binding to check the
+different hands. 
+--------------------------------------------------------------------------------
+
+Source:
+
+Card.cpp
+Card.hpp
+Categorizer.cpp
+Categorizer.hpp
+Categorizers.hpp
+FlushCategorizer.cpp
+FlushCategorizer.hpp
+FourOfAKindCategorizer.cpp
+FourOfAKindCategorizer.hpp
+FullHouseCategorizer.cpp
+FullHouseCategorizer.hpp
+Hand.cpp
+Hand.hpp
+HighCardCategorizer.cpp
+HighCardCategorizer.hpp
+mainPokerRanker.cpp
+OnePairCategorizer.cpp
+OnePairCategorizer.hpp
+PokerRanker.cpp
+PokerRanker.hpp
+StraightCategorizer.cpp
+StraightCategorizer.hpp
+StraightFlushCategorizer.cpp
+StraightFlushCategorizer.hpp
+ThreeOfAKindCategorizer.cpp
+ThreeOfAKindCategorizer.hpp
+TwoPairCategorizer.cpp
+TwoPairCategorizer.hpp
+
+Input files:
+
+pokerhands.cfg
+pokerhands.txt
+--------------------------------------------------------------------------------
